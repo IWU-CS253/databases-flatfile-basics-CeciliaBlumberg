@@ -1,5 +1,6 @@
-# note! the requests package should be installed in pycharm before you begin
-import os 
+# note! the requests package should be installed in PyCharm before you begin
+import csv
+import os
 import requests
 
 # ignore this, don't edit
@@ -20,13 +21,8 @@ if not os.path.isfile('favorites.csv'):
 
 
 # START HERE - this code mirrors CS50x lecture 7 code starting at 11:30
-with open("survey.csv", "r", encoding="utf-8") as file:
+with open("favorites.csv", "r") as file:
     reader = csv.reader(file)
     next(reader)
     for row in reader:
         print(row[1])
-
-
-
-
-
